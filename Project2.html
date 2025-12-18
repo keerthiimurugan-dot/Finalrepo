@@ -1,1 +1,303 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Srinath Love Poster</title>
+<style>
+body {
+margin:0;
+padding:0;
+height:100vh;
+overflow:hidden;
+background:linear-gradient(135deg,#ffafbd,#ffc3a0);
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:"Segoe UI",sans-serif;
+}
+.poster {
+position:relative;
+width:70%;
+max-width:720px;
+padding:50px;
+text-align:center;
+border-radius:25px;
+background:rgba(255,240,245,0.9);
+box-shadow:0 10px 50px rgba(0,0,0,0.3);
+}
+h1 {
+font-size:50px;
+color:#b30059;
+margin-bottom:5px;
+text-shadow:0 0 20px #ff66a3;
+}
+h2 {
+font-size:18px;
+color:#660033;
+font-weight:300;
+margin-bottom:30px;
+letter-spacing:3px;
+}
+p {
+font-size:20px;
+color:#4a001f;
+line-height:1.8;
+margin:12px 0;
+text-align:center;
+}
+.heart {
+position:absolute;
+font-size:30px;
+color:#ff1a75;
+animation:beat 1s infinite;
+}
+@keyframes beat {
+0% {
+transform:scale(1);
+}
+50% {
+transform:scale(1.3);
+}
+100% {
+transform:scale(1);
+}
+}
+.button {
+margin-top:20px;
+padding:12px 25px;
+font-size:18px;
+border:none;
+border-radius:25px;
+background-color:#cc0066;
+color:white;
+cursor:pointer;
+}
+.button:hover {
+background-color:#99004d;
+}
+audio {
+margin-top:30px;
+width:100%;
+opacity:0.8;
+border-radius:10px;
+}
+@keyframes floatUp {
+0% {
+transform:translateY(0) rotate(0deg);
+opacity:1;
+}
+100% {
+transform:translateY(-900px) rotate(360deg);
+opacity:0;
+}
+}
+.floating {
+position:absolute;
+animation:floatUp linear infinite;
+}
+</style>
+</head>
+<body>
+<div class="poster">
+<h1>Srinath ❤️</h1>
+<h2>My Sweet Forever</h2>
+<p class="heart">💖</p>
+<p class="heart">💘</p>
+<p class="heart">💗</p>
+<p class="heart">💞</p>
+<p class="heart">❤️</p>
+<p class="heart">💓</p>
+<p class="heart">💝</p>
+<p class="heart">💟</p>
+<p class="heart">❣️</p>
+<p class="heart">💕</p>
+<button class="button" onclick="showMessage()">Click for Love 💌</button>
+<p id="message"></p>
+<audio controls autoplay loop>
+<source src="apocalypse.mp3" type="audio/mpeg">
+</audio>
+<script>
+function showMessage() {
+document.getElementById("message").innerHTML="Srinath, you are my everything. 💖";
+}
+function createHeart() {
+let heart=document.createElement("div");
+heart.classList.add("floating");
+let hearts=["💖","💘","💗","💞","❤️","💓","💝","💟","❣️","💕"];
+heart.innerHTML=hearts[Math.floor(Math.random()*hearts.length)];
+heart.style.left=Math.random()*window.innerWidth+"px";
+heart.style.fontSize=20+Math.random()*30+"px";
+heart.style.animationDuration=3+Math.random()*5+"s";
+document.body.appendChild(heart);
+setTimeout(()=>{heart.remove();},9000);
+}
+setInterval(createHeart,300);
+</script>
+<script>
+for(let i=0;i<40;i++) {
+createHeart();
+}
+</script>
+<script>
+document.addEventListener("mousemove",function(e){
+let heart=document.createElement("div");
+heart.classList.add("floating");
+let hearts=["💖","💘","💗","💞","❤️","💓","💝","💟","❣️","💕"];
+heart.innerHTML=hearts[Math.floor(Math.random()*hearts.length)];
+heart.style.left=e.pageX+"px";
+heart.style.top=e.pageY+"px";
+heart.style.fontSize=15+Math.random()*20+"px";
+heart.style.animationDuration=2+Math.random()*3+"s";
+document.body.appendChild(heart);
+setTimeout(()=>{heart.remove();},5000);
+});
+</script>
+<script>
+function generateHearts() {
+for(let i=0;i<50;i++) {
+createHeart();
+}
+}
+generateHearts();
+</script>
+<script>
+let colors=["#ff1a75","#ff66a3","#ff3385","#cc0066","#ff99c2","#ff4da6","#ff80bf","#ffb3d9","#ff99cc","#ff66b3"];
+setInterval(function(){
+let heart=document.createElement("div");
+heart.classList.add("floating");
+heart.innerHTML="💖";
+heart.style.left=Math.random()*window.innerWidth+"px";
+heart.style.color=colors[Math.floor(Math.random()*colors.length)];
+heart.style.fontSize=15+Math.random()*25+"px";
+heart.style.animationDuration=3+Math.random()*5+"s";
+document.body.appendChild(heart);
+setTimeout(()=>{heart.remove();},9000);
+},250);
+</script>
+<script>
+window.addEventListener("resize",function(){});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded",function(){});
+</script>
+<script>
+let floatingHearts=setInterval(createHeart,400);
+</script>
+<script>
+function stopHearts() {
+clearInterval(floatingHearts);
+}
+</script>
+<script>
+function restartHearts() {
+floatingHearts=setInterval(createHeart,400);
+}
+</script>
+<script>
+let heartCount=0;
+setInterval(function(){
+if(heartCount<30){
+createHeart();
+heartCount++;
+}
+},500);
+</script>
+<script>
+document.addEventListener("click",function(){
+createHeart();
+});
+</script>
+<script>
+let mouseHearts=false;
+document.addEventListener("mousemove",function(e){
+if(mouseHearts){
+createHeart();
+}
+});
+</script>
+<script>
+function toggleMouseHearts() {
+mouseHearts=!mouseHearts;
+}
+</script>
+<script>
+let heartColors=["#ff1a75","#ff66a3","#ff3385","#cc0066","#ff99c2"];
+setInterval(function(){
+let heart=document.createElement("div");
+heart.classList.add("floating");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*window.innerWidth+"px";
+heart.style.color=heartColors[Math.floor(Math.random()*heartColors.length)];
+heart.style.fontSize=15+Math.random()*25+"px";
+heart.style.animationDuration=3+Math.random()*5+"s";
+document.body.appendChild(heart);
+setTimeout(()=>{heart.remove();},9000);
+},350);
+</script>
+<script>
+document.addEventListener("keydown",function(e){
+if(e.key==="h"){
+toggleMouseHearts();
+}
+});
+</script>
+<script>
+function addStaticHearts(){
+for(let i=0;i<20;i++){
+createHeart();
+}
+}
+addStaticHearts();
+</script>
+<script>
+let allHearts=document.querySelectorAll(".heart");
+allHearts.forEach(function(h){
+h.style.animation="beat 1s infinite";
+});
+</script>
+<script>
+let moreHearts=setInterval(createHeart,600);
+</script>
+<script>
+let heartSizes=[10,15,20,25,30,35];
+setInterval(function(){
+let heart=document.createElement("div");
+heart.classList.add("floating");
+heart.innerHTML="💗";
+heart.style.left=Math.random()*window.innerWidth+"px";
+heart.style.fontSize=heartSizes[Math.floor(Math.random()*heartSizes.length)]+"px";
+heart.style.animationDuration=3+Math.random()*5+"s";
+document.body.appendChild(heart);
+setTimeout(()=>{heart.remove();},9000);
+},400);
+</script>
+<script>
+let floatingInterval=setInterval(createHeart,350);
+</script>
+<script>
+function resetHearts(){
+clearInterval(floatingInterval);
+floatingInterval=setInterval(createHeart,350);
+}
+</script>
+<script>
+window.addEventListener("scroll",function(){});
+</script>
+<script>
+document.addEventListener("mousemove",function(e){
+if(mouseHearts){
+createHeart();
+}
+});
+</script>
+<script>
+function initHearts(){
+generateHearts();
+moreHearts;
+floatingInterval;
+}
+initHearts();
+</script>
+</div>
+</body>
+</html>
