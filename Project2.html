@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Srinath Love Poster</title>
+<title>Srinath</title>
 <style>
 body {
 margin:0;
 padding:0;
 height:100vh;
 overflow:hidden;
-background:linear-gradient(135deg,#ffafbd,#ffc3a0);
+background:linear-gradient(135deg,#fbf9fa,#d9d6d5);
 display:flex;
 justify-content:center;
 align-items:center;
@@ -27,9 +27,9 @@ box-shadow:0 10px 50px rgba(0,0,0,0.3);
 }
 h1 {
 font-size:50px;
-color:#b30059;
+color:#000000;
 margin-bottom:5px;
-text-shadow:0 0 20px #ff66a3;
+text-shadow:0 0 20px #cac0c4;
 }
 h2 {
 font-size:18px;
@@ -68,7 +68,7 @@ padding:12px 25px;
 font-size:18px;
 border:none;
 border-radius:25px;
-background-color:#380b21;
+background-color:#000000;
 color:white;
 cursor:pointer;
 }
@@ -99,31 +99,31 @@ animation:floatUp linear infinite;
 </head>
 <body>
 <div class="poster">
-<h1>Srinath 🦇</h1>
-<h2>My Sweet Forever</h2>
-<p class="heart">💖</p>
-<p class="heart">💘</p>
+<h1>🦇</h1>
+<h2>your lips, my lips Apocalypse</h2>
 <p class="heart">💗</p>
-<p class="heart">💞</p>
-<p class="heart">❤️</p>
-<p class="heart">💓</p>
-<p class="heart">💝</p>
-<p class="heart">💟</p>
-<p class="heart">❣️</p>
-<p class="heart">💕</p>
-<button class="button" onclick="showMessage()">Click for Love 💌</button>
+<p class="heart">💗</p>
+<p class="heart">💗</p>
+<p class="heart">💗</p>
+<p class="heart">💗</p>
+<p class="heart">💗</p>
+<p class="heart">💗</p>
+<p class="heart">💗</p>
+<p class="heart">💗</p>
+<p class="heart">💗</p>
+<button class="button" onclick="showMessage()">Click for a message!</button>
 <p id="message"></p>
 <audio controls autoplay loop>
 <source src="/Users/keerthikam/Desktop/apocalypse.mp3" type="audio/mpeg">
 </audio>
 <script>
 function showMessage() {
-document.getElementById("message").innerHTML="Srinath, you are my everything. 💖";
+document.getElementById("message").innerHTML="Here's our song, Batman.";
 }
 function createHeart() {
 let heart=document.createElement("div");
 heart.classList.add("floating");
-let hearts=["💖","💘","💗","💞","❤️","💓","💝","💟","❣️","💕"];
+let hearts=["💕","💕","💕","💕","💕","💕","💕","💕","💕","💕"];
 heart.innerHTML=hearts[Math.floor(Math.random()*hearts.length)];
 heart.style.left=Math.random()*window.innerWidth+"px";
 heart.style.fontSize=20+Math.random()*30+"px";
@@ -142,7 +142,7 @@ createHeart();
 document.addEventListener("mousemove",function(e){
 let heart=document.createElement("div");
 heart.classList.add("floating");
-let hearts=["💖","💘","💗","💞","❤️","💓","💝","💟","❣️","💕"];
+let hearts=["💕","💕","💕","💕","💕","💕","💕","💕","💕","💕"];
 heart.innerHTML=hearts[Math.floor(Math.random()*hearts.length)];
 heart.style.left=e.pageX+"px";
 heart.style.top=e.pageY+"px";
@@ -165,7 +165,7 @@ let colors=["#ff1a75","#ff66a3","#ff3385","#cc0066","#ff99c2","#ff4da6","#ff80bf
 setInterval(function(){
 let heart=document.createElement("div");
 heart.classList.add("floating");
-heart.innerHTML="💖";
+heart.innerHTML="💕";
 heart.style.left=Math.random()*window.innerWidth+"px";
 heart.style.color=colors[Math.floor(Math.random()*colors.length)];
 heart.style.fontSize=15+Math.random()*25+"px";
